@@ -1658,7 +1658,7 @@ class Renderer:
     @staticmethod
     def field_display_text(table: TableSpec, fld: FieldSpec) -> str:
         if fld.name in table.fks:
-            return f"{fld.name} | {fld.dtype} -> {table.fks[fld.name]}"
+            return f"{fld.name} | {fld.dtype} → {table.fks[fld.name]}"
         return f"{fld.name} | {fld.dtype}"
 
     def layout_tables(
@@ -1710,14 +1710,20 @@ class Renderer:
         draw.line((x, y, x + 8 * direction, y), fill=Theme.rel_line, width=2)
 
     def draw_pk_badge(self, draw: ImageDraw.ImageDraw, right_x: int, y_top: int) -> None:
-        badge_w = 26
+        badge_w = 38
         badge_h = 12
         x0 = right_x - badge_w - 6
         y0 = y_top + (self.row_h - badge_h) // 2
         x1 = x0 + badge_w
         y1 = y0 + badge_h
         draw.rounded_rectangle((x0, y0, x1, y1), radius=3, fill=Theme.pk_gold, outline="#B38B1D")
-        draw.text((x0 + 5, y0 + 1), "PK", fill="#1A1A1A", font=self.font_pk)
+        # Tiny key icon (circle head + shaft + tooth) to satisfy PK key-icon styling.
+        key_cx = x0 + 8
+        key_cy = y0 + badge_h // 2
+        draw.ellipse((key_cx - 2, key_cy - 2, key_cx + 2, key_cy + 2), outline="#1A1A1A", width=1)
+        draw.line((key_cx + 2, key_cy, key_cx + 8, key_cy), fill="#1A1A1A", width=1)
+        draw.line((key_cx + 7, key_cy, key_cx + 7, key_cy + 2), fill="#1A1A1A", width=1)
+        draw.text((x0 + 16, y0 + 1), "PK", fill="#1A1A1A", font=self.font_pk)
 
     def render_module(
         self,
