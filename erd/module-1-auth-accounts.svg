@@ -1,0 +1,360 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1650" viewBox="0 0 1200 1650" role="img" aria-labelledby="title">
+  <title>Module 1 - Auth &amp; Accounts</title>
+  <defs>
+    
+    <marker id="one" viewBox="0 0 12 12" refX="2" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 2 1 L 2 11" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    </marker>
+    <marker id="crow" viewBox="0 0 16 12" refX="14" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 1 6 L 14 6 M 14 6 L 2 1 M 14 6 L 2 11" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    
+    
+    <style>
+      .title { font: 700 28px Inter, Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 15px Inter, Arial, sans-serif; fill: #475569; }
+      .module-title { font: 700 18px Inter, Arial, sans-serif; }
+      .table-title { font: 700 15px Inter, Arial, sans-serif; fill: #ffffff; }
+      .colhead { font: 700 11px Inter, Arial, sans-serif; fill: #475569; }
+      .cell { font: 11px Inter, Arial, sans-serif; fill: #111827; }
+      .dtype { font: 11px "SFMono-Regular", Consolas, monospace; fill: #475569; }
+      .badge { font: 700 10px Inter, Arial, sans-serif; }
+      .line-label {
+        font: 600 12px Inter, Arial, sans-serif;
+        fill: #334155;
+        paint-order: stroke;
+        stroke: #ffffff;
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+      .connector {
+        fill: none;
+        stroke: #475569;
+        stroke-width: 1.8;
+        marker-start: url(#one);
+        marker-end: url(#crow);
+      }
+    </style>
+    
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1650" fill="#ffffff"/>
+  <text x="40" y="48" class="title">Module 1 - Auth &amp; Accounts</text>
+  <text x="40" y="72" class="subtitle">PK and FK fields shown. Crow's foot connectors use side-only routing with relationship labels.</text>
+  <g filter="url(#shadow)">
+    <path class="connector" d="M 400.0 194.0 L 400.0 224.0 L 370.0 224.0 L 370.0 254.0"/> <path class="connector" d="M 760.0 194.0 L 745.0 194.0 L 745.0 194.0 L 730.0 194.0"/> <path class="connector" d="M 40.0 512.0 L 205.0 512.0 L 205.0 254.0 L 370.0 254.0"/> <path class="connector" d="M 760.0 392.0 L 565.0 392.0 L 565.0 512.0 L 370.0 512.0"/> <path class="connector" d="M 760.0 392.0 L 745.0 392.0 L 745.0 392.0 L 730.0 392.0"/> <path class="connector" d="M 760.0 570.0 L 565.0 570.0 L 565.0 254.0 L 370.0 254.0"/> <path class="connector" d="M 760.0 570.0 L 565.0 570.0 L 565.0 680.0 L 370.0 680.0"/> <path class="connector" d="M 40.0 838.0 L 40.0 546.0 L 370.0 546.0 L 370.0 254.0"/> <path class="connector" d="M 370.0 838.0 L 370.0 709.0 L 400.0 709.0 L 400.0 580.0"/> <path class="connector" d="M 400.0 758.0 L 400.0 719.0 L 370.0 719.0 L 370.0 680.0"/> <path class="connector" d="M 400.0 758.0 L 565.0 758.0 L 565.0 580.0 L 730.0 580.0"/> <path class="connector" d="M 400.0 580.0 L 400.0 793.0 L 370.0 793.0 L 370.0 1006.0"/> <path class="connector" d="M 400.0 936.0 L 400.0 595.0 L 370.0 595.0 L 370.0 254.0"/> <path class="connector" d="M 400.0 936.0 L 400.0 971.0 L 370.0 971.0 L 370.0 1006.0"/>
+    <g>
+<rect x="40" y="108" width="330" height="292" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="40" y="108" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="40" y="134" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="126" class="table-title">accounts_accounts</text>
+<text x="54" y="152" class="colhead">Key</text>
+<text x="112" y="152" class="colhead">Field</text>
+<text x="290" y="152" class="colhead">Type</text>
+<rect x="41" y="168" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="172" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="181" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="182" class="cell">accountID</text>
+<text x="290" y="182" class="dtype">int8</text>
+<text x="112" y="202" class="cell">email</text>
+<text x="290" y="202" class="dtype">varchar</text>
+<rect x="41" y="208" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="222" class="cell">password</text>
+<text x="290" y="222" class="dtype">varchar</text>
+<text x="112" y="242" class="cell">isVerified</text>
+<text x="290" y="242" class="dtype">bool</text>
+<rect x="41" y="248" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="262" class="cell">is_active</text>
+<text x="290" y="262" class="dtype">bool</text>
+<text x="112" y="282" class="cell">is_staff</text>
+<text x="290" y="282" class="dtype">bool</text>
+<rect x="41" y="288" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="302" class="cell">KYCVerified</text>
+<text x="290" y="302" class="dtype">bool</text>
+<text x="112" y="322" class="cell">verification_level</text>
+<text x="290" y="322" class="dtype">int4</text>
+<rect x="41" y="328" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="332" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="341" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="342" class="cell">banned_by_id</text>
+<text x="290" y="342" class="dtype">int8</text>
+<text x="112" y="362" class="cell">createdAt</text>
+<text x="290" y="362" class="dtype">timestamptz</text>
+<rect x="41" y="368" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="382" class="cell">updatedAt</text>
+<text x="290" y="382" class="dtype">timestamptz</text>
+</g> <g>
+<rect x="400" y="108" width="330" height="172" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="400" y="108" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="400" y="134" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="126" class="table-title">account_emailaddress</text>
+<text x="414" y="152" class="colhead">Key</text>
+<text x="472" y="152" class="colhead">Field</text>
+<text x="650" y="152" class="colhead">Type</text>
+<rect x="401" y="168" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="172" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="181" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="182" class="cell">id</text>
+<text x="650" y="182" class="dtype">int4</text>
+<text x="472" y="202" class="cell">email</text>
+<text x="650" y="202" class="dtype">varchar</text>
+<rect x="401" y="208" width="328" height="20" fill="#f8fafc"/>
+<text x="472" y="222" class="cell">verified</text>
+<text x="650" y="222" class="dtype">bool</text>
+<text x="472" y="242" class="cell">primary</text>
+<text x="650" y="242" class="dtype">bool</text>
+<rect x="401" y="248" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="252" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="261" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="262" class="cell">user_id</text>
+<text x="650" y="262" class="dtype">int8</text>
+</g> <g>
+<rect x="760" y="108" width="330" height="172" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="760" y="108" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="760" y="134" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="126" class="table-title">account_emailconfirmation</text>
+<text x="774" y="152" class="colhead">Key</text>
+<text x="832" y="152" class="colhead">Field</text>
+<text x="1010" y="152" class="colhead">Type</text>
+<rect x="761" y="168" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="172" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="181" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="182" class="cell">id</text>
+<text x="1010" y="182" class="dtype">int4</text>
+<text x="832" y="202" class="cell">created</text>
+<text x="1010" y="202" class="dtype">timestamptz</text>
+<rect x="761" y="208" width="328" height="20" fill="#f8fafc"/>
+<text x="832" y="222" class="cell">sent</text>
+<text x="1010" y="222" class="dtype">timestamptz</text>
+<text x="832" y="242" class="cell">key</text>
+<text x="1010" y="242" class="dtype">varchar</text>
+<rect x="761" y="248" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="252" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="261" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="262" class="cell">email_address_id</text>
+<text x="1010" y="262" class="dtype">int4</text>
+</g> <g>
+<rect x="40" y="436" width="330" height="152" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="40" y="436" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="40" y="462" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="454" class="table-title">socialaccount_socialaccount</text>
+<text x="54" y="480" class="colhead">Key</text>
+<text x="112" y="480" class="colhead">Field</text>
+<text x="290" y="480" class="colhead">Type</text>
+<rect x="41" y="496" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="500" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="509" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="510" class="cell">id</text>
+<text x="290" y="510" class="dtype">int4</text>
+<text x="112" y="530" class="cell">provider</text>
+<text x="290" y="530" class="dtype">varchar</text>
+<rect x="41" y="536" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="550" class="cell">uid</text>
+<text x="290" y="550" class="dtype">varchar</text>
+<rect x="50" y="560" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="569" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="570" class="cell">user_id</text>
+<text x="290" y="570" class="dtype">int8</text>
+</g> <g>
+<rect x="400" y="316" width="330" height="152" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="400" y="316" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="400" y="342" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="334" class="table-title">socialaccount_socialapp</text>
+<text x="414" y="360" class="colhead">Key</text>
+<text x="472" y="360" class="colhead">Field</text>
+<text x="650" y="360" class="colhead">Type</text>
+<rect x="401" y="376" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="380" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="389" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="390" class="cell">id</text>
+<text x="650" y="390" class="dtype">int4</text>
+<text x="472" y="410" class="cell">provider</text>
+<text x="650" y="410" class="dtype">varchar</text>
+<rect x="401" y="416" width="328" height="20" fill="#f8fafc"/>
+<text x="472" y="430" class="cell">name</text>
+<text x="650" y="430" class="dtype">varchar</text>
+<text x="472" y="450" class="cell">client_id</text>
+<text x="650" y="450" class="dtype">varchar</text>
+</g> <g>
+<rect x="760" y="316" width="330" height="152" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="760" y="316" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="760" y="342" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="334" class="table-title">socialaccount_socialtoken</text>
+<text x="774" y="360" class="colhead">Key</text>
+<text x="832" y="360" class="colhead">Field</text>
+<text x="1010" y="360" class="colhead">Type</text>
+<rect x="761" y="376" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="380" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="389" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="390" class="cell">id</text>
+<text x="1010" y="390" class="dtype">int4</text>
+<rect x="770" y="400" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="409" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="410" class="cell">account_id</text>
+<text x="1010" y="410" class="dtype">int4</text>
+<rect x="761" y="416" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="420" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="429" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="430" class="cell">app_id</text>
+<text x="1010" y="430" class="dtype">int4</text>
+<text x="832" y="450" class="cell">expires_at</text>
+<text x="1010" y="450" class="dtype">timestamptz</text>
+</g> <g>
+<rect x="40" y="624" width="330" height="112" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="40" y="624" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="40" y="650" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="642" class="table-title">auth_group</text>
+<text x="54" y="668" class="colhead">Key</text>
+<text x="112" y="668" class="colhead">Field</text>
+<text x="290" y="668" class="colhead">Type</text>
+<rect x="41" y="684" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="688" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="697" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="698" class="cell">id</text>
+<text x="290" y="698" class="dtype">int4</text>
+<text x="112" y="718" class="cell">name</text>
+<text x="290" y="718" class="dtype">varchar</text>
+</g> <g>
+<rect x="400" y="504" width="330" height="152" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="400" y="504" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="400" y="530" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="522" class="table-title">auth_permission</text>
+<text x="414" y="548" class="colhead">Key</text>
+<text x="472" y="548" class="colhead">Field</text>
+<text x="650" y="548" class="colhead">Type</text>
+<rect x="401" y="564" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="568" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="577" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="578" class="cell">id</text>
+<text x="650" y="578" class="dtype">int4</text>
+<text x="472" y="598" class="cell">name</text>
+<text x="650" y="598" class="dtype">varchar</text>
+<rect x="401" y="604" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="608" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="617" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="618" class="cell">content_type_id</text>
+<text x="650" y="618" class="dtype">int4</text>
+<text x="472" y="638" class="cell">codename</text>
+<text x="650" y="638" class="dtype">varchar</text>
+</g> <g>
+<rect x="760" y="504" width="330" height="132" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="760" y="504" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="760" y="530" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="522" class="table-title">accounts_accounts_groups</text>
+<text x="774" y="548" class="colhead">Key</text>
+<text x="832" y="548" class="colhead">Field</text>
+<text x="1010" y="548" class="colhead">Type</text>
+<rect x="761" y="564" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="568" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="577" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="578" class="cell">id</text>
+<text x="1010" y="578" class="dtype">int8</text>
+<rect x="770" y="588" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="597" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="598" class="cell">accounts_id</text>
+<text x="1010" y="598" class="dtype">int8</text>
+<rect x="761" y="604" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="608" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="617" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="618" class="cell">group_id</text>
+<text x="1010" y="618" class="dtype">int4</text>
+</g> <g>
+<rect x="40" y="772" width="330" height="132" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="40" y="772" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="40" y="798" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="790" class="table-title">accounts_accounts_user_permissions</text>
+<text x="54" y="816" class="colhead">Key</text>
+<text x="112" y="816" class="colhead">Field</text>
+<text x="290" y="816" class="colhead">Type</text>
+<rect x="41" y="832" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="836" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="845" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="846" class="cell">id</text>
+<text x="290" y="846" class="dtype">int8</text>
+<rect x="50" y="856" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="865" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="866" class="cell">accounts_id</text>
+<text x="290" y="866" class="dtype">int8</text>
+<rect x="41" y="872" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="876" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="885" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="886" class="cell">permission_id</text>
+<text x="290" y="886" class="dtype">int4</text>
+</g> <g>
+<rect x="400" y="692" width="330" height="132" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="400" y="692" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="400" y="718" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="710" class="table-title">auth_group_permissions</text>
+<text x="414" y="736" class="colhead">Key</text>
+<text x="472" y="736" class="colhead">Field</text>
+<text x="650" y="736" class="colhead">Type</text>
+<rect x="401" y="752" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="756" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="765" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="766" class="cell">id</text>
+<text x="650" y="766" class="dtype">int8</text>
+<rect x="410" y="776" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="785" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="786" class="cell">group_id</text>
+<text x="650" y="786" class="dtype">int4</text>
+<rect x="401" y="792" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="796" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="805" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="806" class="cell">permission_id</text>
+<text x="650" y="806" class="dtype">int4</text>
+</g> <g>
+<rect x="760" y="672" width="330" height="132" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="760" y="672" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="760" y="698" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="690" class="table-title">django_session</text>
+<text x="774" y="716" class="colhead">Key</text>
+<text x="832" y="716" class="colhead">Field</text>
+<text x="1010" y="716" class="colhead">Type</text>
+<rect x="761" y="732" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="736" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="745" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="746" class="cell">session_key</text>
+<text x="1010" y="746" class="dtype">varchar</text>
+<text x="832" y="766" class="cell">session_data</text>
+<text x="1010" y="766" class="dtype">text</text>
+<rect x="761" y="772" width="328" height="20" fill="#f8fafc"/>
+<text x="832" y="786" class="cell">expire_date</text>
+<text x="1010" y="786" class="dtype">timestamptz</text>
+</g> <g>
+<rect x="40" y="940" width="330" height="132" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="40" y="940" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="40" y="966" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="958" class="table-title">django_content_type</text>
+<text x="54" y="984" class="colhead">Key</text>
+<text x="112" y="984" class="colhead">Field</text>
+<text x="290" y="984" class="colhead">Type</text>
+<rect x="41" y="1000" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="1004" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="1013" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="1014" class="cell">id</text>
+<text x="290" y="1014" class="dtype">int4</text>
+<text x="112" y="1034" class="cell">app_label</text>
+<text x="290" y="1034" class="dtype">varchar</text>
+<rect x="41" y="1040" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="1054" class="cell">model</text>
+<text x="290" y="1054" class="dtype">varchar</text>
+</g> <g>
+<rect x="400" y="860" width="330" height="152" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="400" y="860" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="400" y="886" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="878" class="table-title">django_admin_log</text>
+<text x="414" y="904" class="colhead">Key</text>
+<text x="472" y="904" class="colhead">Field</text>
+<text x="650" y="904" class="colhead">Type</text>
+<rect x="401" y="920" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="924" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="933" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="934" class="cell">id</text>
+<text x="650" y="934" class="dtype">int4</text>
+<rect x="410" y="944" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="953" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="954" class="cell">content_type_id</text>
+<text x="650" y="954" class="dtype">int4</text>
+<rect x="401" y="960" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="964" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="973" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="974" class="cell">user_id</text>
+<text x="650" y="974" class="dtype">int8</text>
+<text x="472" y="994" class="cell">action_time</text>
+<text x="650" y="994" class="dtype">timestamptz</text>
+</g> <g>
+<rect x="760" y="840" width="330" height="152" rx="14" ry="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<rect x="760" y="840" width="330" height="26" rx="14" ry="14" fill="#2563eb"/>
+<rect x="760" y="866" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="858" class="table-title">django_migrations</text>
+<text x="774" y="884" class="colhead">Key</text>
+<text x="832" y="884" class="colhead">Field</text>
+<text x="1010" y="884" class="colhead">Type</text>
+<rect x="761" y="900" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="904" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="913" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="914" class="cell">id</text>
+<text x="1010" y="914" class="dtype">int8</text>
+<text x="832" y="934" class="cell">app</text>
+<text x="1010" y="934" class="dtype">varchar</text>
+<rect x="761" y="940" width="328" height="20" fill="#f8fafc"/>
+<text x="832" y="954" class="cell">name</text>
+<text x="1010" y="954" class="dtype">varchar</text>
+<text x="832" y="974" class="cell">applied</text>
+<text x="1010" y="974" class="dtype">timestamptz</text>
+</g>
+    <text x="385.0" y="216.0" text-anchor="middle" class="line-label">belongs to</text> <text x="745.0" y="186.0" text-anchor="middle" class="line-label">confirms</text> <text x="205.0" y="375.0" text-anchor="middle" class="line-label">belongs to</text> <text x="565.0" y="444.0" text-anchor="middle" class="line-label">stores token for</text> <text x="745.0" y="384.0" text-anchor="middle" class="line-label">uses app</text> <text x="565.0" y="404.0" text-anchor="middle" class="line-label">maps account</text> <text x="565.0" y="617.0" text-anchor="middle" class="line-label">maps group</text> <text x="205.0" y="538.0" text-anchor="middle" class="line-label">grants to</text> <text x="385.0" y="701.0" text-anchor="middle" class="line-label">uses permission</text> <text x="385.0" y="711.0" text-anchor="middle" class="line-label">belongs to</text> <text x="565.0" y="661.0" text-anchor="middle" class="line-label">includes</text> <text x="385.0" y="785.0" text-anchor="middle" class="line-label">describes</text> <text x="385.0" y="587.0" text-anchor="middle" class="line-label">logged by</text> <text x="385.0" y="963.0" text-anchor="middle" class="line-label">targets</text>
+  </g>
+</svg>

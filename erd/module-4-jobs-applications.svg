@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1650" viewBox="0 0 1200 1650" role="img" aria-labelledby="title">
+  <title>Module 4 - Jobs &amp; Applications</title>
+  <defs>
+    
+    <marker id="one" viewBox="0 0 12 12" refX="2" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 2 1 L 2 11" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    </marker>
+    <marker id="crow" viewBox="0 0 16 12" refX="14" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 1 6 L 14 6 M 14 6 L 2 1 M 14 6 L 2 11" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    
+    
+    <style>
+      .title { font: 700 28px Inter, Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 15px Inter, Arial, sans-serif; fill: #475569; }
+      .module-title { font: 700 18px Inter, Arial, sans-serif; }
+      .table-title { font: 700 15px Inter, Arial, sans-serif; fill: #ffffff; }
+      .colhead { font: 700 11px Inter, Arial, sans-serif; fill: #475569; }
+      .cell { font: 11px Inter, Arial, sans-serif; fill: #111827; }
+      .dtype { font: 11px "SFMono-Regular", Consolas, monospace; fill: #475569; }
+      .badge { font: 700 10px Inter, Arial, sans-serif; }
+      .line-label {
+        font: 600 12px Inter, Arial, sans-serif;
+        fill: #334155;
+        paint-order: stroke;
+        stroke: #ffffff;
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+      .connector {
+        fill: none;
+        stroke: #475569;
+        stroke-width: 1.8;
+        marker-start: url(#one);
+        marker-end: url(#crow);
+      }
+    </style>
+    
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1650" fill="#ffffff"/>
+  <text x="40" y="48" class="title">Module 4 - Jobs &amp; Applications</text>
+  <text x="40" y="72" class="subtitle">PK and FK fields shown. Crow's foot connectors use side-only routing with relationship labels.</text>
+  <g filter="url(#shadow)">
+    <path class="connector" d="M 400.0 204.0 L 400.0 229.0 L 370.0 229.0 L 370.0 254.0"/> <path class="connector" d="M 760.0 204.0 L 565.0 204.0 L 565.0 254.0 L 370.0 254.0"/> <path class="connector" d="M 760.0 204.0 L 745.0 204.0 L 745.0 204.0 L 730.0 204.0"/> <path class="connector" d="M 40.0 532.0 L 205.0 532.0 L 205.0 254.0 L 370.0 254.0"/> <path class="connector" d="M 370.0 532.0 L 370.0 368.0 L 400.0 368.0 L 400.0 204.0"/> <path class="connector" d="M 400.0 432.0 L 400.0 343.0 L 370.0 343.0 L 370.0 254.0"/> <path class="connector" d="M 400.0 432.0 L 565.0 432.0 L 565.0 204.0 L 730.0 204.0"/> <path class="connector" d="M 760.0 422.0 L 925.0 422.0 L 925.0 204.0 L 1090.0 204.0"/> <path class="connector" d="M 40.0 740.0 L 40.0 497.0 L 370.0 497.0 L 370.0 254.0"/>
+    <g>
+<rect x="40" y="108" width="330" height="292" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="40" y="108" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="40" y="134" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="126" class="table-title">jobs</text>
+<text x="54" y="152" class="colhead">Key</text>
+<text x="112" y="152" class="colhead">Field</text>
+<text x="290" y="152" class="colhead">Type</text>
+<rect x="41" y="168" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="172" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="181" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="182" class="cell">jobID</text>
+<text x="290" y="182" class="dtype">int8</text>
+<rect x="50" y="192" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="201" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="202" class="cell">clientID_id</text>
+<text x="290" y="202" class="dtype">int8</text>
+<rect x="41" y="208" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="212" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="221" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="222" class="cell">categoryID_id</text>
+<text x="290" y="222" class="dtype">int8</text>
+<rect x="50" y="232" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="241" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="242" class="cell">assignedWorkerID_id</text>
+<text x="290" y="242" class="dtype">int8</text>
+<rect x="41" y="248" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="252" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="261" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="262" class="cell">assignedAgencyFK_id</text>
+<text x="290" y="262" class="dtype">int8</text>
+<rect x="50" y="272" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="281" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="282" class="cell">assignedEmployeeID_id</text>
+<text x="290" y="282" class="dtype">int8</text>
+<rect x="41" y="288" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="292" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="301" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="302" class="cell">cashPaymentApprovedBy_id</text>
+<text x="290" y="302" class="dtype">int8</text>
+<rect x="50" y="312" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="321" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="322" class="cell">cancelledByAccountID_id</text>
+<text x="290" y="322" class="dtype">int8</text>
+<rect x="41" y="328" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="342" class="cell">title</text>
+<text x="290" y="342" class="dtype">varchar</text>
+<text x="112" y="362" class="cell">status</text>
+<text x="290" y="362" class="dtype">varchar</text>
+<rect x="41" y="368" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="382" class="cell">budget</text>
+<text x="290" y="382" class="dtype">numeric</text>
+</g> <g>
+<rect x="400" y="108" width="330" height="192" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="400" y="108" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="400" y="134" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="126" class="table-title">job_skill_slots</text>
+<text x="414" y="152" class="colhead">Key</text>
+<text x="472" y="152" class="colhead">Field</text>
+<text x="650" y="152" class="colhead">Type</text>
+<rect x="401" y="168" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="172" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="181" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="182" class="cell">skillSlotID</text>
+<text x="650" y="182" class="dtype">int8</text>
+<rect x="410" y="192" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="201" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="202" class="cell">jobID_id</text>
+<text x="650" y="202" class="dtype">int8</text>
+<rect x="401" y="208" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="212" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="221" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="222" class="cell">specializationID_id</text>
+<text x="650" y="222" class="dtype">int8</text>
+<rect x="410" y="232" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="241" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="242" class="cell">invited_agency_id</text>
+<text x="650" y="242" class="dtype">int8</text>
+<rect x="401" y="248" width="328" height="20" fill="#f8fafc"/>
+<text x="472" y="262" class="cell">workers_needed</text>
+<text x="650" y="262" class="dtype">int4</text>
+<text x="472" y="282" class="cell">status</text>
+<text x="650" y="282" class="dtype">varchar</text>
+</g> <g>
+<rect x="760" y="108" width="330" height="192" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="760" y="108" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="760" y="134" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="126" class="table-title">job_applications</text>
+<text x="774" y="152" class="colhead">Key</text>
+<text x="832" y="152" class="colhead">Field</text>
+<text x="1010" y="152" class="colhead">Type</text>
+<rect x="761" y="168" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="172" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="181" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="182" class="cell">applicationID</text>
+<text x="1010" y="182" class="dtype">int8</text>
+<rect x="770" y="192" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="201" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="202" class="cell">jobID_id</text>
+<text x="1010" y="202" class="dtype">int8</text>
+<rect x="761" y="208" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="212" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="221" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="222" class="cell">workerID_id</text>
+<text x="1010" y="222" class="dtype">int8</text>
+<rect x="770" y="232" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="241" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="242" class="cell">applied_skill_slot_id</text>
+<text x="1010" y="242" class="dtype">int8</text>
+<rect x="761" y="248" width="328" height="20" fill="#f8fafc"/>
+<text x="832" y="262" class="cell">status</text>
+<text x="1010" y="262" class="dtype">varchar</text>
+<text x="832" y="282" class="cell">proposedBudget</text>
+<text x="1010" y="282" class="dtype">numeric</text>
+</g> <g>
+<rect x="40" y="436" width="330" height="192" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="40" y="436" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="40" y="462" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="454" class="table-title">job_worker_assignments</text>
+<text x="54" y="480" class="colhead">Key</text>
+<text x="112" y="480" class="colhead">Field</text>
+<text x="290" y="480" class="colhead">Type</text>
+<rect x="41" y="496" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="500" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="509" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="510" class="cell">assignmentID</text>
+<text x="290" y="510" class="dtype">int8</text>
+<rect x="50" y="520" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="529" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="530" class="cell">jobID_id</text>
+<text x="290" y="530" class="dtype">int8</text>
+<rect x="41" y="536" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="540" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="549" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="550" class="cell">skillSlotID_id</text>
+<text x="290" y="550" class="dtype">int8</text>
+<rect x="50" y="560" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="569" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="570" class="cell">workerID_id</text>
+<text x="290" y="570" class="dtype">int8</text>
+<rect x="41" y="576" width="328" height="20" fill="#f8fafc"/>
+<text x="112" y="590" class="cell">assignment_status</text>
+<text x="290" y="590" class="dtype">varchar</text>
+<text x="112" y="610" class="cell">slot_position</text>
+<text x="290" y="610" class="dtype">int4</text>
+</g> <g>
+<rect x="400" y="336" width="330" height="192" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="400" y="336" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="400" y="362" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="414" y="354" class="table-title">job_employee_assignments</text>
+<text x="414" y="380" class="colhead">Key</text>
+<text x="472" y="380" class="colhead">Field</text>
+<text x="650" y="380" class="colhead">Type</text>
+<rect x="401" y="396" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="400" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="422" y="409" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="472" y="410" class="cell">assignmentID</text>
+<text x="650" y="410" class="dtype">int8</text>
+<rect x="410" y="420" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="429" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="430" class="cell">job_id</text>
+<text x="650" y="430" class="dtype">int8</text>
+<rect x="401" y="436" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="440" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="449" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="450" class="cell">employee_id</text>
+<text x="650" y="450" class="dtype">int8</text>
+<rect x="410" y="460" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="469" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="470" class="cell">skill_slot_id</text>
+<text x="650" y="470" class="dtype">int8</text>
+<rect x="401" y="476" width="328" height="20" fill="#f8fafc"/>
+<rect x="410" y="480" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="422" y="489" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="472" y="490" class="cell">assignedBy_id</text>
+<text x="650" y="490" class="dtype">int8</text>
+<text x="472" y="510" class="cell">status</text>
+<text x="650" y="510" class="dtype">varchar</text>
+</g> <g>
+<rect x="760" y="336" width="330" height="172" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="760" y="336" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="760" y="362" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="774" y="354" class="table-title">price_negotiations</text>
+<text x="774" y="380" class="colhead">Key</text>
+<text x="832" y="380" class="colhead">Field</text>
+<text x="1010" y="380" class="colhead">Type</text>
+<rect x="761" y="396" width="328" height="20" fill="#f8fafc"/>
+<rect x="770" y="400" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="782" y="409" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="832" y="410" class="cell">negotiationID</text>
+<text x="1010" y="410" class="dtype">int8</text>
+<rect x="770" y="420" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="782" y="429" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="832" y="430" class="cell">application_id</text>
+<text x="1010" y="430" class="dtype">int8</text>
+<rect x="761" y="436" width="328" height="20" fill="#f8fafc"/>
+<text x="832" y="450" class="cell">actor</text>
+<text x="1010" y="450" class="dtype">varchar</text>
+<text x="832" y="470" class="cell">round_number</text>
+<text x="1010" y="470" class="dtype">int2</text>
+<rect x="761" y="476" width="328" height="20" fill="#f8fafc"/>
+<text x="832" y="490" class="cell">status</text>
+<text x="1010" y="490" class="dtype">varchar</text>
+</g> <g>
+<rect x="40" y="664" width="330" height="152" rx="14" ry="14" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+<rect x="40" y="664" width="330" height="26" rx="14" ry="14" fill="#7c3aed"/>
+<rect x="40" y="690" width="330" height="34" fill="#ffffff" stroke="none"/>
+<text x="54" y="682" class="table-title">saved_jobs</text>
+<text x="54" y="708" class="colhead">Key</text>
+<text x="112" y="708" class="colhead">Field</text>
+<text x="290" y="708" class="colhead">Type</text>
+<rect x="41" y="724" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="728" width="24" height="12" rx="6" ry="6" fill="#f59e0b"/><text x="62" y="737" text-anchor="middle" class="badge" fill="#ffffff">PK</text>
+<text x="112" y="738" class="cell">savedJobID</text>
+<text x="290" y="738" class="dtype">int8</text>
+<rect x="50" y="748" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="757" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="758" class="cell">jobID_id</text>
+<text x="290" y="758" class="dtype">int8</text>
+<rect x="41" y="764" width="328" height="20" fill="#f8fafc"/>
+<rect x="50" y="768" width="24" height="12" rx="6" ry="6" fill="#2563eb"/><text x="62" y="777" text-anchor="middle" class="badge" fill="#ffffff">FK</text>
+<text x="112" y="778" class="cell">workerID_id</text>
+<text x="290" y="778" class="dtype">int8</text>
+<text x="112" y="798" class="cell">savedAt</text>
+<text x="290" y="798" class="dtype">timestamptz</text>
+</g>
+    <text x="385.0" y="221.0" text-anchor="middle" class="line-label">belongs to</text> <text x="565.0" y="221.0" text-anchor="middle" class="line-label">applies to</text> <text x="745.0" y="196.0" text-anchor="middle" class="line-label">targets</text> <text x="205.0" y="385.0" text-anchor="middle" class="line-label">belongs to</text> <text x="385.0" y="360.0" text-anchor="middle" class="line-label">fills</text> <text x="385.0" y="335.0" text-anchor="middle" class="line-label">belongs to</text> <text x="565.0" y="310.0" text-anchor="middle" class="line-label">fills</text> <text x="925.0" y="305.0" text-anchor="middle" class="line-label">negotiates</text> <text x="205.0" y="489.0" text-anchor="middle" class="line-label">saves</text>
+  </g>
+</svg>
