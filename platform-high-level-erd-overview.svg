@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1120" viewBox="0 0 1700 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Platform Database - High-Level ERD Overview</title>
+  <desc id="desc">A high-level, paper-friendly ERD overview that groups the platform database into 10 modules and shows labeled relationships between them.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Inter, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 400 18px Inter, Arial, sans-serif; fill: #475569; }
+      .card-title { font: 700 19px Inter, Arial, sans-serif; }
+      .num { font: 700 18px Inter, Arial, sans-serif; fill: #ffffff; }
+      .list { font: 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #1f2937; }
+      .connector { fill: none; stroke: #64748b; stroke-width: 2.4; marker-end: url(#arrow); }
+      .label {
+        font: 600 15px Inter, Arial, sans-serif;
+        fill: #334155;
+        paint-order: stroke;
+        stroke: #ffffff;
+        stroke-width: 5px;
+        stroke-linejoin: round;
+      }
+      .inner { fill: #ffffff; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <rect width="1700" height="1120" fill="url(#bg)"/>
+
+  <text x="850" y="56" text-anchor="middle" class="title">Platform Database - High-Level ERD Overview</text>
+  <text x="850" y="87" text-anchor="middle" class="subtitle">Module-based ERD for accounts, jobs, KYC, messaging, finance, admin, and workforce</text>
+
+  <!-- Connectors -->
+  <path class="connector" d="M 480 230 C 540 230, 565 230, 625 230"/>
+  <text x="552" y="214" text-anchor="middle" class="label">has profile</text>
+
+  <path class="connector" d="M 460 170 C 760 70, 1030 70, 1220 170"/>
+  <text x="840" y="122" text-anchor="middle" class="label">submits KYC</text>
+
+  <path class="connector" d="M 250 351 C 250 500, 205 560, 205 690"/>
+  <text x="166" y="544" text-anchor="middle" class="label">owns wallet</text>
+
+  <path class="connector" d="M 860 351 C 735 380, 650 385, 460 500"/>
+  <text x="650" y="405" text-anchor="middle" class="label">posts / applies</text>
+
+  <path class="connector" d="M 460 510 C 530 510, 540 510, 600 510"/>
+  <text x="531" y="494" text-anchor="middle" class="label">creates</text>
+
+  <path class="connector" d="M 1000 510 C 1075 510, 1085 510, 1140 510"/>
+  <text x="1070" y="494" text-anchor="middle" class="label">tracks</text>
+
+  <path class="connector" d="M 330 620 C 420 675, 520 710, 510 730"/>
+  <text x="430" y="668" text-anchor="middle" class="label">starts conversation</text>
+
+  <path class="connector" d="M 170 620 C 150 655, 145 670, 140 690"/>
+  <text x="96" y="651" text-anchor="middle" class="label">generates payment</text>
+
+  <path class="connector" d="M 1060 690 C 1115 585, 1170 430, 1260 350"/>
+  <text x="1148" y="544" text-anchor="middle" class="label">reviews</text>
+
+  <path class="connector" d="M 1000 760 C 840 715, 710 665, 430 620"/>
+  <text x="776" y="720" text-anchor="middle" class="label">monitors</text>
+
+  <path class="connector" d="M 1310 760 C 1180 760, 1150 760, 1245 760"/>
+  <text x="1278" y="744" text-anchor="middle" class="label">audited by</text>
+
+  <path class="connector" d="M 410 790 C 555 790, 690 790, 870 790"/>
+  <text x="640" y="772" text-anchor="middle" class="label">feeds records</text>
+
+  <path class="connector" d="M 220 350 C 380 640, 980 710, 960 710"/>
+  <text x="520" y="640" text-anchor="middle" class="label">managed by</text>
+
+  <path class="connector" d="M 1472 690 C 1472 585, 1472 500, 1472 620"/>
+  <text x="1519" y="589" text-anchor="middle" class="label">records attendance</text>
+
+  <path class="connector" d="M 1285 790 C 1170 790, 1105 790, 960 790"/>
+  <text x="1124" y="812" text-anchor="middle" class="label">communicates</text>
+
+  <path class="connector" d="M 1472 690 C 1505 580, 1545 450, 1450 350"/>
+  <text x="1570" y="522" text-anchor="middle" class="label">verifies business</text>
+
+  <path class="connector" d="M 1285 745 C 1040 675, 760 660, 460 545"/>
+  <text x="890" y="640" text-anchor="middle" class="label">fulfills jobs</text>
+
+  <!-- Module 1 -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="130" rx="20" ry="20" width="430" height="220" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.2"/>
+    <rect x="74" y="184" rx="12" ry="12" width="382" height="142" class="inner" stroke="#93c5fd"/>
+    <circle cx="102" cy="158" r="17" fill="#3b82f6"/>
+    <text x="102" y="164" text-anchor="middle" class="num">1</text>
+    <text x="132" y="165" class="card-title" fill="#1d4ed8">Auth &amp; Accounts</text>
+    <text x="95" y="212" class="list">
+      <tspan x="95" dy="0">accounts_accounts</tspan>
+      <tspan x="95" dy="18">account_emailaddress</tspan>
+      <tspan x="95" dy="18">account_emailconfirmation</tspan>
+      <tspan x="95" dy="18">socialaccount_socialaccount</tspan>
+      <tspan x="95" dy="18">socialaccount_socialapp</tspan>
+      <tspan x="95" dy="18">socialaccount_socialtoken</tspan>
+      <tspan x="95" dy="18">auth_group</tspan>
+      <tspan x="95" dy="18">auth_permission</tspan>
+      <tspan x="95" dy="18">django_session</tspan>
+    </text>
+  </g>
+
+  <!-- Module 2 -->
+  <g filter="url(#shadow)">
+    <rect x="625" y="130" rx="20" ry="20" width="430" height="220" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.2"/>
+    <rect x="649" y="184" rx="12" ry="12" width="382" height="142" class="inner" stroke="#86efac"/>
+    <circle cx="677" cy="158" r="17" fill="#22c55e"/>
+    <text x="677" y="164" text-anchor="middle" class="num">2</text>
+    <text x="707" y="165" class="card-title" fill="#15803d">Profiles &amp; Specializations</text>
+    <text x="670" y="212" class="list">
+      <tspan x="670" dy="0">accounts_profile</tspan>
+      <tspan x="670" dy="18">accounts_clientprofile</tspan>
+      <tspan x="670" dy="18">accounts_workerprofile</tspan>
+      <tspan x="670" dy="18">accounts_agency</tspan>
+      <tspan x="670" dy="18">accounts_workerspecialization</tspan>
+      <tspan x="670" dy="18">specializations</tspan>
+      <tspan x="670" dy="18">accounts_interestedjobs</tspan>
+      <tspan x="670" dy="18">accounts_city</tspan>
+      <tspan x="670" dy="18">accounts_barangay</tspan>
+    </text>
+  </g>
+
+  <!-- Module 3 -->
+  <g filter="url(#shadow)">
+    <rect x="1220" y="130" rx="20" ry="20" width="430" height="220" fill="#fff7ed" stroke="#f97316" stroke-width="2.2"/>
+    <rect x="1244" y="184" rx="12" ry="12" width="382" height="142" class="inner" stroke="#fdba74"/>
+    <circle cx="1272" cy="158" r="17" fill="#f97316"/>
+    <text x="1272" y="164" text-anchor="middle" class="num">3</text>
+    <text x="1302" y="165" class="card-title" fill="#c2410c">KYC Verification</text>
+    <text x="1265" y="212" class="list">
+      <tspan x="1265" dy="0">accounts_kyc</tspan>
+      <tspan x="1265" dy="18">accounts_kycfiles</tspan>
+      <tspan x="1265" dy="18">kyc_extracted_data</tspan>
+      <tspan x="1265" dy="18">agency_agencykyc</tspan>
+      <tspan x="1265" dy="18">agency_agencykycfile</tspan>
+      <tspan x="1265" dy="18">agency_kyc_extracted_data</tspan>
+    </text>
+  </g>
+
+  <!-- Module 4 -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="400" rx="20" ry="20" width="430" height="220" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2.2"/>
+    <rect x="74" y="454" rx="12" ry="12" width="382" height="142" class="inner" stroke="#c4b5fd"/>
+    <circle cx="102" cy="428" r="17" fill="#8b5cf6"/>
+    <text x="102" y="434" text-anchor="middle" class="num">4</text>
+    <text x="132" y="435" class="card-title" fill="#6d28d9">Jobs &amp; Applications</text>
+    <text x="95" y="482" class="list">
+      <tspan x="95" dy="0">jobs</tspan>
+      <tspan x="95" dy="18">job_applications</tspan>
+      <tspan x="95" dy="18">job_skill_slots</tspan>
+      <tspan x="95" dy="18">job_worker_assignments</tspan>
+      <tspan x="95" dy="18">job_employee_assignments</tspan>
+      <tspan x="95" dy="18">price_negotiations</tspan>
+      <tspan x="95" dy="18">saved_jobs</tspan>
+    </text>
+  </g>
+
+  <!-- Module 5 -->
+  <g filter="url(#shadow)">
+    <rect x="625" y="400" rx="20" ry="20" width="430" height="220" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.2"/>
+    <rect x="649" y="454" rx="12" ry="12" width="382" height="142" class="inner" stroke="#fcd34d"/>
+    <circle cx="677" cy="428" r="17" fill="#f59e0b"/>
+    <text x="677" y="434" text-anchor="middle" class="num">5</text>
+    <text x="707" y="435" class="card-title" fill="#b45309">Job Operations</text>
+    <text x="670" y="482" class="list">
+      <tspan x="670" dy="0">job_logs</tspan>
+      <tspan x="670" dy="18">job_materials</tspan>
+      <tspan x="670" dy="18">job_photos</tspan>
+      <tspan x="670" dy="18">job_reviews</tspan>
+      <tspan x="670" dy="18">job_disputes</tspan>
+      <tspan x="670" dy="18">dispute_evidence</tspan>
+      <tspan x="670" dy="18">review_skill_tags</tspan>
+    </text>
+  </g>
+
+  <!-- Module 6 -->
+  <g filter="url(#shadow)">
+    <rect x="1220" y="400" rx="20" ry="20" width="430" height="220" fill="#fdf2f8" stroke="#ec4899" stroke-width="2.2"/>
+    <rect x="1244" y="454" rx="12" ry="12" width="382" height="142" class="inner" stroke="#f9a8d4"/>
+    <circle cx="1272" cy="428" r="17" fill="#ec4899"/>
+    <text x="1272" y="434" text-anchor="middle" class="num">6</text>
+    <text x="1302" y="435" class="card-title" fill="#be185d">Daily Jobs</text>
+    <text x="1265" y="482" class="list">
+      <tspan x="1265" dy="0">daily_attendance</tspan>
+      <tspan x="1265" dy="18">daily_job_extensions</tspan>
+      <tspan x="1265" dy="18">daily_rate_changes</tspan>
+      <tspan x="1265" dy="18">daily_skip_day_requests</tspan>
+      <tspan x="1265" dy="18">backjob_schedule_confirmations</tspan>
+    </text>
+  </g>
+
+  <!-- Module 7 -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="690" rx="20" ry="20" width="370" height="220" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2.2"/>
+    <rect x="62" y="744" rx="12" ry="12" width="326" height="142" class="inner" stroke="#5eead4"/>
+    <circle cx="92" cy="718" r="17" fill="#14b8a6"/>
+    <text x="92" y="724" text-anchor="middle" class="num">7</text>
+    <text x="122" y="725" class="card-title" fill="#0f766e">Finance &amp; Payments</text>
+    <text x="84" y="772" class="list">
+      <tspan x="84" dy="0">accounts_wallet</tspan>
+      <tspan x="84" dy="18">accounts_transaction</tspan>
+      <tspan x="84" dy="18">accounts_userpaymentmethod</tspan>
+    </text>
+  </g>
+
+  <!-- Module 8 -->
+  <g filter="url(#shadow)">
+    <rect x="455" y="690" rx="20" ry="20" width="370" height="220" fill="#f5f3ff" stroke="#a855f7" stroke-width="2.2"/>
+    <rect x="477" y="744" rx="12" ry="12" width="326" height="142" class="inner" stroke="#d8b4fe"/>
+    <circle cx="507" cy="718" r="17" fill="#a855f7"/>
+    <text x="507" y="724" text-anchor="middle" class="num">8</text>
+    <text x="537" y="725" class="card-title" fill="#7e22ce">Messaging</text>
+    <text x="499" y="772" class="list">
+      <tspan x="499" dy="0">conversation</tspan>
+      <tspan x="499" dy="18">conversation_participants</tspan>
+      <tspan x="499" dy="18">message</tspan>
+      <tspan x="499" dy="18">message_attachment</tspan>
+    </text>
+  </g>
+
+  <!-- Module 9 -->
+  <g filter="url(#shadow)">
+    <rect x="870" y="690" rx="20" ry="20" width="415" height="240" fill="#f8fafc" stroke="#6b7280" stroke-width="2.2"/>
+    <rect x="892" y="744" rx="12" ry="12" width="371" height="166" class="inner" stroke="#cbd5e1"/>
+    <circle cx="922" cy="718" r="17" fill="#6b7280"/>
+    <text x="922" y="724" text-anchor="middle" class="num">9</text>
+    <text x="952" y="725" class="card-title" fill="#374151">Admin Panel</text>
+    <text x="914" y="772" class="list">
+      <tspan x="914" dy="0">adminpanel_adminaccount</tspan>
+      <tspan x="914" dy="18">adminpanel_auditlog</tspan>
+      <tspan x="914" dy="18">adminpanel_kyclogs</tspan>
+      <tspan x="914" dy="18">adminpanel_supportticket</tspan>
+      <tspan x="914" dy="18">adminpanel_supportticketreply</tspan>
+      <tspan x="914" dy="18">adminpanel_userreport</tspan>
+      <tspan x="914" dy="18">adminpanel_platformsettings</tspan>
+      <tspan x="914" dy="18">adminpanel_cannedresponse</tspan>
+      <tspan x="914" dy="18">adminpanel_faq</tspan>
+      <tspan x="914" dy="18">adminpanel_systemroles</tspan>
+    </text>
+  </g>
+
+  <!-- Module 10 -->
+  <g filter="url(#shadow)">
+    <rect x="1285" y="690" rx="20" ry="20" width="370" height="220" fill="#fff1f2" stroke="#ef4444" stroke-width="2.2"/>
+    <rect x="1307" y="744" rx="12" ry="12" width="326" height="142" class="inner" stroke="#fca5a5"/>
+    <circle cx="1337" cy="718" r="17" fill="#ef4444"/>
+    <text x="1337" y="724" text-anchor="middle" class="num">10</text>
+    <text x="1367" y="725" class="card-title" fill="#dc2626">Workers &amp; Agencies</text>
+    <text x="1329" y="772" class="list">
+      <tspan x="1329" dy="0">agency_employees</tspan>
+      <tspan x="1329" dy="18">worker_certifications</tspan>
+      <tspan x="1329" dy="18">worker_materials</tspan>
+      <tspan x="1329" dy="18">worker_portfolio</tspan>
+      <tspan x="1329" dy="18">profiles_workerproduct</tspan>
+      <tspan x="1329" dy="18">accounts_notification</tspan>
+      <tspan x="1329" dy="18">accounts_notificationsettings</tspan>
+      <tspan x="1329" dy="18">accounts_pushtoken</tspan>
+    </text>
+  </g>
+</svg>
